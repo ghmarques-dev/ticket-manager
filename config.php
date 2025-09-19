@@ -1,19 +1,19 @@
 <?php
-// Database configuration
-$db_host = "metro.proxy.rlwy.net";
-$db_port = "35713";
-$db_user = "root";
-$db_pass = "afAxARGPUsVwpFldUhleEmcqeAKmOnKa";
-$db_name = "railway";
+// Database configuration (via Environment Variables)
+$db_host = getenv("MYSQLHOST") ?: "localhost";
+$db_port = getenv("MYSQLPORT") ?: "3306";
+$db_user = getenv("MYSQLUSER") ?: "root";
+$db_pass = getenv("MYSQLPASSWORD") ?: "";
+$db_name = getenv("MYSQLDATABASE") ?: "itflow";
 
 // Timezone
-date_default_timezone_set("America/Sao_Paulo");
+date_default_timezone_set(getenv("APP_TIMEZONE") ?: "America/Sao_Paulo");
 
 // Start page (depois do login)
 $config_start_page = "dashboard";
 
-// (Opcional) Se a aplicação pedir base URL, pode forçar:
-$config_base_url = "https://ticket-manager-tawny.vercel.app";
+// Base URL (ajuda a evitar redirects infinitos)
+$config_base_url = getenv("APP_URL") ?: "http://localhost";
 
 // Conexão PDO
 try {
