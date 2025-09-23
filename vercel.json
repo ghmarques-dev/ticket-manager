@@ -1,6 +1,8 @@
 {
   "functions": {
-    "*.php": { "runtime": "vercel-php@0.7.4" }
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.4"
+    }
   },
   "routes": [
     { "src": "/user/(.*\\.php)", "dest": "/user/$1" },
