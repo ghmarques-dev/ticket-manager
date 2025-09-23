@@ -9,4 +9,3 @@
     { "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico))", "dest": "/$1" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
-}
