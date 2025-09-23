@@ -5,6 +5,6 @@
   "routes": [
     { "src": "/user/(.*\\.php)", "dest": "/user/$1" },
     { "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico))", "dest": "/$1" },
-    { "src": "/(.*)", "dest": "/index.php" }
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
