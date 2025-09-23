@@ -11,7 +11,7 @@ date_default_timezone_set("America/Sao_Paulo");
 // Start page (depois do login)
 $config_start_page = "dashboard";
 
-$config_base_url = ""; // ou "/"
+$config_base_url = "/"; // ou "/"
 
 
 // Conexão PDO
