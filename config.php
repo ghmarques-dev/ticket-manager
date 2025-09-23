@@ -11,8 +11,8 @@ date_default_timezone_set("America/Sao_Paulo");
 // Start page (depois do login)
 $config_start_page = "dashboard";
 
-// Base URL
-$config_base_url = "http://localhost:8000"; // local, pode mudar na Vercel
+$config_base_url = ""; // ou "/"
+
 
 // Conexão PDO
 try {
