@@ -1,8 +1,8 @@
 <?php
-$db_host = "trolley.proxy.rlwy.net";
-$db_port = "16349";
+$db_host = "yamanote.proxy.rlwy.net";
+$db_port = "21703";
 $db_user = "root";
-$db_pass = "kmGIovWJucxjLFZxZcicXJaLJpfwwpDd";
+$db_pass = "VIQWVykUoPpLEABLprBswgVvfgmEmDWa";
 $db_name = "railway";
 
 // Timezone
