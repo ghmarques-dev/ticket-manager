@@ -1,6 +1,96 @@
 {
+  "functions": {
+    "*.php": {
+      "runtime": "@vercel/php@0.6.0"
+    }
+  },
   "routes": [
-    { "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico))", "dest": "/$1" },
-    { "src": "/(.*)", "dest": "/index.php" }
-  ]
+    {
+      "src": "^/favicon\\.ico$",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "^/robots\\.txt$", 
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "^/(css|js|plugins|uploads)/(.*)$",
+      "dest": "/$1/$2"
+    },
+    {
+      "src": "^/user/css/(.*)$",
+      "dest": "/user/css/$1"
+    },
+    {
+      "src": "^/user/js/(.*)$", 
+      "dest": "/user/js/$1"
+    },
+    {
+      "src": "^/admin/(.+\\.php)$",
+      "dest": "/admin/$1"
+    },
+    {
+      "src": "^/admin/?$",
+      "dest": "/admin/index.php"
+    },
+    {
+      "src": "^/user/(.+\\.php)$",
+      "dest": "/user/$1"
+    },
+    {
+      "src": "^/user/?$",
+      "dest": "/user/index.php"
+    },
+    {
+      "src": "^/client/(.+\\.php)$",
+      "dest": "/client/$1"
+    },
+    {
+      "src": "^/client/?$",
+      "dest": "/client/index.php"
+    },
+    {
+      "src": "^/guest/(.+\\.php)$",
+      "dest": "/guest/$1"
+    },
+    {
+      "src": "^/guest/?$",
+      "dest": "/guest/index.php"
+    },
+    {
+      "src": "^/api/(.*)$",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "^/setup/?$",
+      "dest": "/setup/index.php"
+    },
+    {
+      "src": "^/setup/(.+)$",
+      "dest": "/setup/$1"
+    },
+    {
+      "src": "^/login\\.php$",
+      "dest": "/login.php"
+    },
+    {
+      "src": "^/keepalive\\.php$",
+      "dest": "/keepalive.php"
+    },
+    {
+      "src": "^/(.+\\.php)$",
+      "dest": "/$1"
+    },
+    {
+      "src": "^/$",
+      "dest": "/index.php"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/index.php"
+    }
+  ],
+  "env": {
+    "PHP_VERSION": "8.1"
+  }
 }
