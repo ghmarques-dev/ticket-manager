@@ -1,96 +1,84 @@
 {
-  "functions": {
-    "*.php": {
-      "runtime": "@vercel/php@0.6.0"
-    }
-  },
   "routes": [
     {
-      "src": "^/favicon\\.ico$",
+      "src": "/favicon.ico",
       "dest": "/favicon.ico"
     },
     {
-      "src": "^/robots\\.txt$", 
+      "src": "/robots.txt", 
       "dest": "/robots.txt"
     },
     {
-      "src": "^/(css|js|plugins|uploads)/(.*)$",
+      "src": "/(css|js|plugins|uploads)/(.*)",
       "dest": "/$1/$2"
     },
     {
-      "src": "^/user/css/(.*)$",
-      "dest": "/user/css/$1"
+      "src": "/user/(css|js)/(.*)",
+      "dest": "/user/$1/$2"
     },
     {
-      "src": "^/user/js/(.*)$", 
-      "dest": "/user/js/$1"
-    },
-    {
-      "src": "^/admin/(.+\\.php)$",
+      "src": "/admin/(.*\\.php)",
       "dest": "/admin/$1"
     },
     {
-      "src": "^/admin/?$",
+      "src": "/admin/?",
       "dest": "/admin/index.php"
     },
     {
-      "src": "^/user/(.+\\.php)$",
+      "src": "/user/(.*\\.php)",
       "dest": "/user/$1"
     },
     {
-      "src": "^/user/?$",
+      "src": "/user/?",
       "dest": "/user/index.php"
     },
     {
-      "src": "^/client/(.+\\.php)$",
+      "src": "/client/(.*\\.php)",
       "dest": "/client/$1"
     },
     {
-      "src": "^/client/?$",
+      "src": "/client/?",
       "dest": "/client/index.php"
     },
     {
-      "src": "^/guest/(.+\\.php)$",
+      "src": "/guest/(.*\\.php)",
       "dest": "/guest/$1"
     },
     {
-      "src": "^/guest/?$",
+      "src": "/guest/?",
       "dest": "/guest/index.php"
     },
     {
-      "src": "^/api/(.*)$",
+      "src": "/api/(.*)",
       "dest": "/api/$1"
     },
     {
-      "src": "^/setup/?$",
+      "src": "/setup/?",
       "dest": "/setup/index.php"
     },
     {
-      "src": "^/setup/(.+)$",
+      "src": "/setup/(.*)",
       "dest": "/setup/$1"
     },
     {
-      "src": "^/login\\.php$",
+      "src": "/login.php",
       "dest": "/login.php"
     },
     {
-      "src": "^/keepalive\\.php$",
+      "src": "/keepalive.php",
       "dest": "/keepalive.php"
     },
     {
-      "src": "^/(.+\\.php)$",
+      "src": "/(.*\\.php)",
       "dest": "/$1"
     },
     {
-      "src": "^/$",
+      "src": "/",
       "dest": "/index.php"
     },
     {
-      "src": "^/(.*)$",
+      "src": "/(.*)",
       "dest": "/index.php"
     }
-  ],
-  "env": {
-    "PHP_VERSION": "8.1"
-  }
+  ]
 }
