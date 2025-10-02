@@ -1,6 +1,7 @@
 <?php 
 
 if (file_exists("config.php")) {
+    require_once "config.php";
     //require_once "includes/check_login.php";
  
     if (isset($config_start_page)) {
